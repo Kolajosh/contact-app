@@ -1,3 +1,25 @@
+# About App
+This project was created with reactjs and firebase.
+Goal of this app was to learn and test my firebase skills.
+
+CRUD methodology was used for this app, and i also successfully
+added sort, filter and search functionality.
+
+The data is stored and fetched from firebase.
+
+# Styling
+React Bootstrap was used in styling the app with a little bit of css for custom codes
+
+# Functionality
+- Add Contact
+- Update Contact
+- Filter Contact
+- Sort Contacts based on Keywords
+- Delete Contacts
+- Edit Contacts
+- View Contacts
+- Reset filtered and sorted data
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
