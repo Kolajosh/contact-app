@@ -14,21 +14,20 @@ function Search() {
   console.log("Search ", search);
 
   useEffect(() => {
+    const searchData = () => {
+      fireDb
+        .child("contacts")
+        .orderByChild("name")
+        .equalTo(search)
+        .on("value", (snapshot) => {
+          if (snapshot.val()) {
+            const data = snapshot.val();
+            setData(data);
+          }
+        });
+    };
     searchData();
   }, [search]);
-
-  const searchData = () => {
-    fireDb
-      .child("contacts")
-      .orderByChild("name")
-      .equalTo(search)
-      .on("value", (snapshot) => {
-        if (snapshot.val()) {
-          const data = snapshot.val();
-          setData(data);
-        }
-      });
-  };
 
   return (
     <Container>
